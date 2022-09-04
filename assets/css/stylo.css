@@ -1,0 +1,268 @@
+/* setando tudo com margem e padding 0 */
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilização do cabeçalho */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 10px;
+    height: 72px;
+    color: #fff;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 4px;
+    cursor: pointer;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+header nav ul li {
+    background-color: #222;
+    margin: 0px 8px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 12px;
+    font-weight: bold;
+}
+
+header nav ul li:hover {
+    color: #0A58CA;
+}
+
+header nav ul li a {
+    padding: 12px;
+    width: 100%;
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+/* div com imagem background */
+
+.bg-image {
+    background-image: url('../images/escritorio.jpg');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: -10;
+}
+
+
+/* Area principal, obs foi usado função calc  para retirar do calculo do tamanho 72px para bater com tamanho header */
+
+#main {
+    width: 100%;
+    height: calc(100vh - 72px);
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.l-side,
+.r-side {
+    margin: 15px;
+    height: 500px;
+    padding: 15px;
+}
+
+
+/* rgba(0, 83, 139, 0.805) */
+
+.l-side {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(76, 66, 66, 0.616);
+    border-bottom-left-radius: 50px;
+    border-radius: 20px;
+    color: #fff;
+    width: 650px;
+}
+
+.l-side img {
+    max-width: 550px;
+    max-height: 470px;
+    border-radius: 60px;
+}
+
+.r-side {
+    flex: 1;
+    background-color: rgba(76, 66, 66, 0.616);
+    margin-right: 40px;
+    border-radius: 20px;
+    color: #fff;
+    max-width: 55%;
+}
+
+#about {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.contact-us {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 200;
+    background-color: rgba(255, 255, 255, 0.616);
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.contact {
+    width: 450px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.contact .close {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+
+/* Area criada para formação e portifolio */
+
+#more {
+    color: #000;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#more .formacao,
+#more .portifolio {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 550px;
+    height: 550px;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 2px 3px 4px #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formacao ul {
+    width: 90%;
+}
+
+.formacao ul li {
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formacao ul li:hover {
+    background-color: #0D6EFD;
+    color: #fff;
+}
+
+.projetos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
+    flex: 1;
+}
+
+.projeto .folder {
+    width: 90%;
+    height: 100%;
+    margin: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projeto .folder img {
+    width: 500px;
+    height: 180px;
+}
+
+
+/* Responsividade para monitores menor */
+
+@media only screen and (max-width: 1200px) {
+    .content {
+        flex-direction: column;
+    }
+    .l-side,
+    .r-side {
+        height: 350px;
+    }
+    #more {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    #more .formacao,
+    #more .portifolio {
+        margin-top: 5px;
+    }
+}

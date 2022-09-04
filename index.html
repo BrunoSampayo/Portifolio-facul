@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio_Uninter</title>
+    <!--link para css e bootstrap-->
+    <link rel="stylesheet" href="assets/css/stylo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Area de contato que aparece via javascript -->
+    <div class="contact-us">
+        <div class="contact"><button class="close" onclick="show()">X</button>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Email </label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Assunto</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- parte superior pagina cabeçalho com os menus -->
+    <header>
+        <div class="name">
+            <h1>Bruno Sampayo</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about"> Sobre</a></li>
+                <li><a href="#more">Formação</a></li>
+                <li><a href="#more"> Portifolio</a></li>
+                <li onclick="show()"> Contato</li>
+            </ul>
+        </nav>
+    </header>
+    <!-- div criada para colocar fundo foi deixada numa layer atras com atributo z-index via css -->
+    <div class="bg-image"></div>
+    <!-- seção com conteudo principal -->
+    <section id="main" class="">
+
+        <div class="content">
+            <div class="l-side">
+                <img src="assets/images/eu.png" alt="">
+
+            </div>
+            <div class="r-side ">
+                <div id="about">
+                    <h4 class="h1">Bruno Sampayo</h4>
+                    <p class="h2">Sobre:</p>
+                    <p class="h3">Sou apaixonado por programação e tudo que envolve tecnologia, pois a tecnologia veio para nos ajudar e estou aqui para fazer essa ligação entre voce e a programação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Seção area com portifolio e formação -->
+    <section id="more">
+        <div class="formacao">
+            <p class="h4">Formação</p>
+            <ul class="list-group">
+                <li class="list-group-item">Analise e Desenvolimento de Sistemas - Uninter</li>
+                <li class="list-group-item">Web Developer - B7Web</li>
+                <li class="list-group-item">Ingles - Mairo Vergara</li>
+                <li class="list-group-item">Git Hub</li>
+                <li class="list-group-item">Html 5 / CSS 3 / Javascript</li>
+            </ul>
+        </div>
+        <div class="portifolio">
+            <p class="h4">Portifolio</p>
+            <div class="projetos">
+                <div class="projeto">
+                    <p class="h5">Pizzaria</p>
+                    <div class="folder"><img src="assets/images/pg1.png" alt=""></div>
+                </div>
+                <div class="projeto">
+                    <p class="h5">Awax</p>
+                    <div class="folder"><img src="assets/images/pg2.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Link Js-->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
