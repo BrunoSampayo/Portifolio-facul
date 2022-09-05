@@ -265,4 +265,19 @@ header nav ul li a {
     #more .portifolio {
         margin-top: 5px;
     }
+    .l-side {
+        width: 350px;
+        border-radius: 100%;
+    }
+    .l-side img {
+        border-radius: 100%;
+        width: 350px;
+        height: 340px;
+    }
+    .r-side {
+        width: 100%;
+    }
+    #about .h3 {
+        font-size: 20px;
+    }
 }
