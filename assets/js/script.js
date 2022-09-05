@@ -7,5 +7,5 @@ function show() {
         document.querySelector('.contact-us').style.display = 'flex'
 
     }
-    console.log('foi')
+
 }
